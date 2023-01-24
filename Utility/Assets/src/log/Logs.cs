@@ -16,7 +16,7 @@ public class Logs : MonoBehaviour
 
         if (logColor != LogColor.None)
         {
-            log = $"<color={GetColorByLogColor(titleColor)}>{log}</color>";
+            log = $"<color={GetColorByLogColor(logColor)}>{log}</color>";
         }
         
         Debug.unityLogger.Log(logType, $"{title} -- {log}");
@@ -24,24 +24,22 @@ public class Logs : MonoBehaviour
 
     public static string GetColorByLogColor(LogColor logColor)
     {
-        string color = "0,0,0";
-
         switch (logColor)
         {
             case LogColor.Blue:
-                return ":blue";
+                return "blue";
             
             case LogColor.Green:
-                return ":green";
+                return "green";
             
             case LogColor.Red:
-                return ":red";
+                return "red";
 
             case LogColor.None:
-                return ":white";
+                return "white";
         }
         
-        return ":white";
+        return "white";
     }
 
     public enum LogColor
