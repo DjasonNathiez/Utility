@@ -1,13 +1,13 @@
 {
-  "NAME" : "COM.DNATHIEZ.UTILITIES",
-  "VERSION" : "0.0.1",
-  "DISLAYNAME" : "UTILITIES",
-  "DESCRIPTION" : "COLLECTION OF UTILITY FUNCTIONS TO BE USED IN UNITY.",
-  "UNITY" : "2021.3",
-  "AUTHOR" : "DNATHIEZ",
-  "KEYWORD" : ["UTILITIES"],
-  "DEPENDENCIES" : {
-    "COM.UNITY.ADDRESSABLES" : "1.19.19",
-    "COM.UNITY.COLLECTIONS" : "1.2.4"
+  "name" : "COM.DNATHIEZ.UTILITIES",
+  "version" : "0.0.1",
+  "displayName" : "UTILITIES",
+  "description" : "COLLECTION OF UTILITY FUNCTIONS TO BE USED IN UNITY.",
+  "unity" : "2021.3",
+  "author" : "DNATHIEZ",
+  "keywords" : ["UTILITIES"],
+  "dependencies" : {
+    "com.unity.addressables" : "1.19.19",
+    "com.unity.collections" : "1.2.4"
   }
 }
