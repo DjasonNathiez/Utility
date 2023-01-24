@@ -1,6 +1,6 @@
 {
   "name" : "com.dnathiez.utilities",
-  "version" : "0.0.22",
+  "version" : "0.0.33",
   "displayName" : "Utilities",
   "description" : "COLLECTION OF UTILITY FUNCTIONS TO BE USED IN UNITY.",
   "unity" : "2021.3",

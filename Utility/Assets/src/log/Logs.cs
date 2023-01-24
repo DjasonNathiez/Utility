@@ -9,4 +9,10 @@ public class Logs : MonoBehaviour
     {
         Debug.Log(text);
     }
+
+    [Conditional("DEBUG")]
+    public static void LogError(string text)
+    {
+        Debug.LogError(text);
+    }
 }
