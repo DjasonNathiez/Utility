@@ -1,11 +1,11 @@
 {
   "name" : "com.dnathiez.utilities",
-  "version" : "0.0.1",
+  "version" : "0.0.22",
   "displayName" : "Utilities",
   "description" : "COLLECTION OF UTILITY FUNCTIONS TO BE USED IN UNITY.",
   "unity" : "2021.3",
-  "author" : "DNATHIEZ",
-  "keywords" : ["UTILITIES"],
+  "author" : "dnathiez",
+  "keywords" : ["Utitilies"],
   "dependencies" : {
     "com.unity.addressables" : "1.19.19",
     "com.unity.collections" : "1.2.4"
