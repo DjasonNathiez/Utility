@@ -1,9 +1,20 @@
+using System;
 using System.Diagnostics;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
-public class Logs : MonoBehaviour
+public static class Logs
 {
+    public enum LogColor
+    {
+        None,
+        Red,
+        Blue,
+        Green,
+        Yellow,
+        Black
+    }
+
     [Conditional("DEBUG")]
     public static void Log(string title, string log, LogType logType = LogType.Log, LogColor titleColor = LogColor.None, LogColor logColor = LogColor.None)
     {
@@ -21,32 +32,32 @@ public class Logs : MonoBehaviour
         
         Debug.unityLogger.Log(logType, $"{title} -- {log}");
     }
-
-    public static string GetColorByLogColor(LogColor logColor)
+    
+    [Conditional("DEBUG")]
+    public static void Log(string title, string log, LogType logType = LogType.Log, LogColor logColor = LogColor.None)
     {
-        switch (logColor)
+        title = $"<b>[{title}]</b>";
+        
+        if (logColor != LogColor.None)
         {
-            case LogColor.Blue:
-                return "blue";
-            
-            case LogColor.Green:
-                return "green";
-            
-            case LogColor.Red:
-                return "red";
-
-            case LogColor.None:
-                return "white";
+            log = $"<color={GetColorByLogColor(logColor)}>{log}</color>";
         }
         
-        return "white";
+        Debug.unityLogger.Log(logType, $"{title} -- {log}");
     }
 
-    public enum LogColor
+    private static string GetColorByLogColor(LogColor logColor)
     {
-        None,
-        Red,
-        Blue,
-        Green
+        return logColor switch
+        {
+            LogColor.None => "",
+            LogColor.Red => "#D45656",
+            LogColor.Blue => "#71A7C2",
+            LogColor.Yellow =>"#F1C232",
+            LogColor.Green => "#8FCE00",
+            LogColor.Black => "#000000",
+            _ => throw new ArgumentOutOfRangeException(nameof(logColor), logColor, null)
+        };
     }
+
 }
