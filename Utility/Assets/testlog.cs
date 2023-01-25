@@ -11,9 +11,8 @@ public class testlog : MonoSingleton<testlog>
         var obj = pool.GetFromPool();
         pool.AddToPool(obj);
         pool.AddToPool(obj);
-        //StartCoroutine(pool.AddToPoolLatter(obj, 5f));
         
-        Logs.Log("WESH", "BONJOUR", LogType.Log, Logs.LogColor.Green, Logs.LogColor.Red);
+        Logs.Log("TEST", "HELLO WORLD", LogType.Log, Logs.LogColor.Green, Logs.LogColor.Red);
         
         cube.SetPosX(2);
         cube.SetScale(3);

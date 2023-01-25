@@ -2,27 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 
-public class InsertionSort : ISorter
+namespace Algorithms.Sorter
 {
-    public IEnumerable<T> Sort<T>(IEnumerable<T> sequenceToSort) where T : IComparable<T>
+    public class InsertionSort : ISorter
     {
-        var copy = sequenceToSort.ToArray();
-        for(var i = 1;i<copy.Length;i++)
+        public IEnumerable<T> Sort<T>(IEnumerable<T> sequenceToSort) where T : IComparable<T>
         {
-            for(var j=i-1; j>=0; j--)
+            var copy = sequenceToSort.ToArray();
+            for(var i = 1;i<copy.Length;i++)
             {
-                if (copy[j].CompareTo(copy[j+1])>0)
+                for(var j=i-1; j>=0; j--)
                 {
-                    var temp = copy[j];
-                    copy[j]= copy[j+1];
-                    copy[j+1]= temp;
-                }
-                else
-                {
-                    break;
+                    if (copy[j].CompareTo(copy[j+1])>0)
+                    {
+                        var temp = copy[j];
+                        copy[j]= copy[j+1];
+                        copy[j+1]= temp;
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
             }
+            return copy;
         }
-        return copy;
     }
 }

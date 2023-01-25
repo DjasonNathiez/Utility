@@ -1,8 +1,8 @@
 {
   "name" : "com.dnathiez.utilities",
-  "version" : "0.0.4",
+  "version" : "0.0.5",
   "displayName" : "Utilities",
-  "description" : "COLLECTION OF UTILITY FUNCTIONS TO BE USED IN UNITY.",
+  "description" : "Djason Nathiez personal collection of utilities function for Unity.",
   "unity" : "2021.3",
   "author" : "dnathiez",
   "keywords" : ["Utitilies"],

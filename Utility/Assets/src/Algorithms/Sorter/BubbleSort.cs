@@ -2,34 +2,37 @@
 using System.Collections.Generic;
 using System.Linq;
 
-public class BubbleSort : ISorter
+namespace Algorithms.Sorter
 {
-    public IEnumerable<T> Sort<T>(IEnumerable<T> sequenceToSort) where T : IComparable<T>
+    public class BubbleSort : ISorter
     {
-        var copy = sequenceToSort.ToArray();
-        bool sorted;
-        var top = copy.Length - 1;
-        while(true)
+        public IEnumerable<T> Sort<T>(IEnumerable<T> sequenceToSort) where T : IComparable<T>
         {
-            sorted = true;
-            var lastSwap = 0;
-            for(var i=0; i<top;i++)
+            var copy = sequenceToSort.ToArray();
+            bool sorted;
+            var top = copy.Length - 1;
+            while(true)
             {
-                if(copy[i].CompareTo(copy[i + 1]) > 0)
+                sorted = true;
+                var lastSwap = 0;
+                for(var i=0; i<top;i++)
                 {
-                    sorted = false;
-                    var temp = copy[i];
-                    copy[i] = copy[i + 1];
-                    copy[i + 1] = temp;
-                    lastSwap = i;
+                    if(copy[i].CompareTo(copy[i + 1]) > 0)
+                    {
+                        sorted = false;
+                        var temp = copy[i]; 
+                        copy[i] = copy[i + 1];
+                        copy[i + 1] = temp;
+                        lastSwap = i;
+                    }
+                }
+                top = lastSwap;
+                if(sorted)
+                {
+                    break;
                 }
             }
-            top = lastSwap;
-            if(sorted)
-            {
-                break;
-            }
+            return copy;
         }
-        return copy;
     }
 }
