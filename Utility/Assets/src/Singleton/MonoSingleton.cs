@@ -1,3 +1,4 @@
+using Algorithms;
 using UnityEngine;
 
 public class MonoSingleton<T> : MonoBehaviour
