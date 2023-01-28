@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public static class Helpers
@@ -46,6 +47,25 @@ public static class Helpers
 
         #endregion
 
+        #region Rotate
+
+        public static void RotateX(this Transform t, float rot)
+        {
+            t.Rotate(rot,0,0);
+        }
+
+        public static void RotateY(this Transform t, float rot)
+        {
+            t.Rotate(0,rot,0);
+        }
+
+        public static void RotateZ(this Transform t, float rot)
+        {
+            t.Rotate(0,0,rot);
+        }
+        
+        #endregion
+        
     #endregion
 
     #region RECT TRANSFORM
@@ -79,6 +99,15 @@ public static class Helpers
 
 
         #endregion
+
+    #endregion
+
+    #region CONVERTERS
+    
+    public static int ConvertToInt<T>(this T param)
+    {
+        return Convert.ToInt32(param);
+    }
 
     #endregion
 }
