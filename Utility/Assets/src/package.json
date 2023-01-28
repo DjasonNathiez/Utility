@@ -1,6 +1,6 @@
 {
   "name" : "com.dnathiez.utilities",
-  "version" : "0.0.8",
+  "version" : "0.0.9",
   "displayName" : "Utilities",
   "description" : "Djason Nathiez personal collection of utilities function for Unity. \b 28/01/2023",
   "unity" : "2021.3",
@@ -9,5 +9,6 @@
   "dependencies" : {
     "com.unity.addressables" : "1.19.19",
     "com.unity.collections" : "1.2.4"
-  }
+  },
+  "documentationURL" : "https://sites.google.com/view/utilitiesdjason-nathiez"
 }
