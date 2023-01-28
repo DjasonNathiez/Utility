@@ -1,8 +1,8 @@
 {
   "name" : "com.dnathiez.utilities",
-  "version" : "0.0.8 - January 28, 2023",
+  "version" : "0.0.8",
   "displayName" : "Utilities",
-  "description" : "Djason Nathiez personal collection of utilities function for Unity.",
+  "description" : "Djason Nathiez personal collection of utilities function for Unity. \b 28/01/2023",
   "unity" : "2021.3",
   "author" : "dnathiez",
   "keywords" : ["Utitilies"],
