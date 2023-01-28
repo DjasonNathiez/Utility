@@ -9,13 +9,14 @@ using UnityEngine.UI;
 public class MenuItemPersonnal
 {
     private const string kUILayerName = "UI";
+    private const string gitAssetPath = "Packages/com.dnathiez.utilities/";
     
 #if UNITY_EDITOR
-
+    
     [MenuItem("GameObject/UI/Mobile Cursor", priority = 10)]
     public static void CreateMobileCursor(MenuCommand menuCommand)
     {
-        Object mobileCursor = AssetDatabase.LoadAssetAtPath("Assets/src/Component/Gameplay/Mobile/Prefab/Mobile Cursor Controller.prefab", typeof(object));
+        Object mobileCursor = AssetDatabase.LoadAssetAtPath(gitAssetPath + "Component/Gameplay/Mobile/Prefab/Mobile Cursor Controller.prefab", typeof(object));
         GameObject obj = (GameObject) PrefabUtility.InstantiatePrefab(mobileCursor);
         PrefabUtility.UnpackPrefabInstance(obj, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
         
