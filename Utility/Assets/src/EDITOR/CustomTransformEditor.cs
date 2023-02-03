@@ -1,7 +1,6 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(Transform))]
 public class CustomTransformEditor : Editor
 {
     public override void OnInspectorGUI()
